@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    {% block head %}
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Crypto Grid Trading Simulator</title>
+
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/favicon.svg') }}" />
+
+        <!-- ========================= CSS here ========================= -->
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/LineIcons.3.0.css') }}" />
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/tiny-slider.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/glightbox.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/datepicker.css') }}" />
+    {% endblock %}
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- Start Header Area -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="nav-inner">
+                        <!-- Start Navbar -->
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="#">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="{{ url_for('static', filename='assets/images/logo/white-logo.svg') }}" alt="Logo" />
+                                    </div>
+                                    <div class="col-8">
+                                        <h5 class="font-semibold tracking-tighter text-gray-900 text-white main-title" style="margin-top: 10px;margin-left: -10px;">Grid Trading</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a href="https://testnet.degate.com/" target="_blank"  aria-label="Toggle navigation">DeGate.com</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav>
+                        <!-- End Navbar -->
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Hero Area -->
+    <section class="hero-area">
+        <img class="hero-shape" src="{{ url_for('static', filename='assets/images/hero/hero-shape.svg') }}" alt="#">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="text-center lg:max-w-4xl text-4xl lg:text-6xl mx-auto">
+                    <h1 class="font-semibold tracking-tighter text-gray-900 text-white main-title">Grid Trading</h1>
+                    <h1 class="mx-auto font-semibold tracking-tighter special-text text-white main-subtitle">Calculator &amp; Simulator</h1>
+                    <h6 style="color: #555 !important;padding-top: 5px;">Easily calculate potential profits from your grid trading set up.<br/> Optimize your trading set-up via historical data pulled from Binance API.</h6>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Area -->
+
+    <!-- Start Footer Area -->
+    <footer class="footer section">
+        <!-- Start Copyright Area -->
+        <div class="copyright-area">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <p class="copyright-text">© 2022 Crypto Grid Trading Simulator</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <p class="copyright-owner">Designed and Developed by <a href="#"
+                                    rel="nofollow" target="_blank">realhardworking</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright Area -->
+    </footer>
+    <!--/ End Footer Area -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+
+    <script src="{{ url_for('static', filename='assets/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/popper.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/tiny-slider.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/glightbox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/count-up.min.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+    <script src="{{ url_for('static', filename='assets/js/bootstrap-datepicker.js') }}"></script>
+
+    {% block custom_js %}
+    {% endblock %}
+  </body>
+</html>
