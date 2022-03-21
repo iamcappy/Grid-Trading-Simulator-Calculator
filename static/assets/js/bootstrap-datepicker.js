@@ -78,6 +78,15 @@
 				that.hide();
 			}
 		});
+		$("#start_date").on('mousedown', function (e) {
+			// Clicked the start datepicker, hide the end datepicker
+			$("#end_date").datepicker('hide')
+		});
+
+		$("#end_date").on('mousedown', function (e) {
+			// Clicked the end datepicker, hide the start datepicker
+			$("#start_date").datepicker('hide')
+		});
 
 		this.autoclose = false;
 		if ('autoclose' in options) {
